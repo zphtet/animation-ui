@@ -102,11 +102,7 @@ function Pager({ pages, light }: { pages: string[]; light: boolean }) {
     )
 }
 
-/**
- * The reference's signature bottom-right blob button. Hover morphs its outline. Clicking it
- * grows the blob until it covers the screen, jumps to the gallery underneath, then shrinks
- * back to reveal it. On the gallery page it becomes "back to top".
- */
+
 function CollectionBlobButton() {
     const { page, count, goTo } = useStage()
     const [hover, setHover] = useState(false)
@@ -186,7 +182,7 @@ export function FixedItems({ pages }: { pages: string[] }) {
                 aria-label="Pages"
                 className="pointer-events-none fixed top-1/2 right-6 z-40 hidden -translate-y-1/2 sm:block"
             >
-                <Pager pages={pages} light={light} />
+                {/* <Pager pages={pages} light={light} /> */}
             </nav>
             <nav aria-label="Social links" className="pointer-events-none fixed bottom-6 left-6 z-40 sm:bottom-8 sm:left-10">
                 <Socials />
