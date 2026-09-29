@@ -3,7 +3,9 @@ import { AnimatePresence } from "motion/react";
 import { useMemo, useState } from "react";
 import { Hero } from "./sections/Hero";
 import { StageProvider } from "@/stage/StageProvider";
-import { IntroContext } from "./motion/intro";
+import { IntroContext } from "@/motion/intro";
+import { FixedItems } from "@/sections/FixedItems";
+import { Mascot } from "@/sections/Mascot";
 const PAGES = ['Home', 'Story', 'Orbit', 'Collection']
 const App = () => {
   const [interactive, setInteractive] = useState(false)
@@ -17,11 +19,11 @@ const App = () => {
             {!loaded && <Loader onComplete={() => setLoaded(true)} />}
           </AnimatePresence>
 
+          <FixedItems pages={PAGES} />
+
           <main className="fixed inset-0 overflow-hidden">
-            {
-              interactive && <Hero />
-            }
-            {/* {interactive && <div>hello</div>} */}
+            <Hero />
+            <Mascot />
           </main>
         </StageProvider>
       </IntroContext>
