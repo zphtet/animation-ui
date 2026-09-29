@@ -9,14 +9,14 @@ import { useIntro } from "@/motion/intro";
 const TITLE = ['Fluffy', 'PALS']
 const BLOBS = [
   {
-    seed: 3,
+    seed: 40,
     from: '#ffc2a8',
     to: '#ffb3c7',
     className: 'left-[30%] top-[-6%] w-[clamp(160px,18vw,300px)]',
     depth: 0.9,
   },
   {
-    seed: 11,
+    seed: 32,
     from: '#b8ecff',
     to: '#c9b8ff',
     className: 'left-[4%] top-[48%] w-[clamp(150px,16vw,260px)]',
@@ -97,31 +97,6 @@ function TitleLetter({ char, index }: { char: string; index: number }) {
   )
 }
 
-function ScrollHint() {
-  const { ready } = useIntro()
-  const { position } = useStage()
-  const opacity = useTransform(position, [0, 0.15], [1, 0])
-  return (
-    <motion.div
-      className="absolute bottom-[4.5rem] left-1/2 -translate-x-1/2 sm:bottom-10"
-      style={{ opacity }}
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 1.2, duration: 0.6 }}
-    >
-      <div className="flex flex-col items-center gap-2 font-display text-xs font-semibold tracking-[0.35em] text-navy/70 uppercase">
-        scroll
-        <span className="flex h-9 w-5.5 justify-center rounded-full border-2 border-navy/50 pt-1.5">
-          <motion.span
-            className="h-2 w-1 rounded-full bg-navy/70"
-            animate={ready ? { y: 0, opacity: 1 } : undefined}
-            transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
-          />
-        </span>
-      </div>
-    </motion.div >
-  )
-}
 export function Hero() {
 
   let letterIndex = 0
@@ -144,8 +119,6 @@ export function Hero() {
           </span>
         ))}
       </h1>
-
-      <ScrollHint />
     </Scene>
   )
 }
