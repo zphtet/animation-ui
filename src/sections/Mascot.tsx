@@ -18,7 +18,7 @@ export function Mascot() {
         // Entrance (outer) is kept outside the rotation (inner), so it rises from below whatever the pose.
         <motion.div
             aria-hidden
-            className="pointer-events-none absolute top-[54%] left-1/2 w-[clamp(170px,min(50vw,27svh),380px)] -translate-x-1/2 -translate-y-1/2 sm:top-[60%] sm:w-[clamp(170px,30vmin,380px)]"
+            className="pointer-events-none absolute z-1000 top-[54%] left-1/2 w-[clamp(170px,min(50vw,27svh),380px)] -translate-x-1/2 -translate-y-1/2 sm:top-[60%] sm:w-[clamp(170px,30vmin,380px)]"
             style={{ visibility }}
             initial={{ y: '70vh', opacity: 0 }}
             animate={ready ? { y: 0, opacity: 1 } : undefined}
