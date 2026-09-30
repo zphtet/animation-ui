@@ -8,6 +8,7 @@ import { FixedItems } from "@/sections/FixedItems";
 import { Mascot } from "@/sections/Mascot";
 import { Story } from "@/sections/Story";
 import { Orbit } from "@/sections/Orbit";
+import { Collection } from "@/sections/Collection";
 const PAGES = ['Home', 'Story', 'Orbit', 'Collection']
 const App = () => {
   const [interactive, setInteractive] = useState(false)
@@ -28,6 +29,7 @@ const App = () => {
             <Mascot />
             <Orbit />
             <Story />
+            <Collection />
           </main>
         </StageProvider>
       </IntroContext>
