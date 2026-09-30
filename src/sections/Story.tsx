@@ -41,10 +41,7 @@ function Friend({ friend, pal, index }: { friend: (typeof FRIENDS)[number]; pal:
     )
 }
 
-/**
- * Page 2: the background turns butter-yellow, a hill rises, friends fly in around the
- * now-standing mascot and the copy types itself in.
- */
+
 export function Story() {
     const { page, position } = useStage()
     const hillY = useTransform(position, [0.3, 1, 1.7], ['100%', '0%', '100%'])
