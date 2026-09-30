@@ -6,6 +6,7 @@ import { StageProvider } from "@/stage/StageProvider";
 import { IntroContext } from "@/motion/intro";
 import { FixedItems } from "@/sections/FixedItems";
 import { Mascot } from "@/sections/Mascot";
+import { Story } from "@/sections/Story";
 const PAGES = ['Home', 'Story', 'Orbit', 'Collection']
 const App = () => {
   const [interactive, setInteractive] = useState(false)
@@ -24,6 +25,7 @@ const App = () => {
           <main className="fixed inset-0 overflow-hidden">
             <Hero />
             <Mascot />
+            <Story />
           </main>
         </StageProvider>
       </IntroContext>
