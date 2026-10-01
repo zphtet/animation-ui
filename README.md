@@ -173,7 +173,6 @@ src/
   stage/      StageProvider (page + position, input), Scene (stacked page), stage (context, hooks)
   sections/   Loader, Hero, Story, Mascot (actor across pages 1–3), Orbit, Collection
   motion/     WaveText, SplitText, Float, TiltCard, pointer, tier / TierProvider, intro
-  chrome/     Logo, socials, page dots, morphing blob button
   art/        Critter (parametric SVG animals), Blob, blobPath (morph-safe paths), icons
   data/       pals and collection items (deterministic)
 ```
