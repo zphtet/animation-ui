@@ -25,10 +25,7 @@ const RARITY_TONE: Record<CollectionItem['rarity'], string> = {
     Legendary: 'bg-butter/25 text-butter',
 }
 
-/**
- * Floating fish & stars at three depths; nearer ones move further as the track moves (parallax).
- * `left` is in vw.
- */
+
 const FLOATERS = [
     { kind: 'fish', top: '18%', left: 12, depth: 1, color: '#4cc9f0', size: 'w-8' },
     { kind: 'star', top: '26%', left: 38, depth: 0.4, color: '#d9f36b', size: 'w-7' },
