@@ -4,7 +4,7 @@ A single animated landing page that recreates the **feel** of [nft.fluffyhugs.io
 
 Like the reference, the page is **one fixed 100vh screen**. Scrolling doesn't move a document. It moves the story to the next page with a transition.
 
-- **Live URL:** _add after deploy_
+- **Live URL:** [Live URL](https://animation-ui-5sy2.vercel.app/)
 - **Stack:** React 19, TypeScript, Vite, **Framer Motion**, **Tailwind CSS v4**
 
 ---
