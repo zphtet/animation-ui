@@ -72,35 +72,8 @@ function Socials() {
     )
 }
 
-/** Right-edge page dots: shows where you are and jumps to any page. */
-function Pager({ pages, light }: { pages: string[]; light: boolean }) {
-    const { page, goTo } = useStage()
-    return (
-        <ol className="pointer-events-auto flex flex-col items-end gap-3">
-            {pages.map((name, i) => (
-                <li key={name}>
-                    <button
-                        type="button"
-                        onClick={() => goTo(i)}
-                        aria-label={`Page ${i + 1}: ${name}`}
-                        aria-current={page === i ? 'step' : undefined}
-                        className="group flex items-center justify-end gap-2 py-1"
-                    >
-                        <span
-                            className={`font-display text-xs font-semibold tracking-widest opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:opacity-100 ${light ? 'text-white' : 'text-navy'} translate-x-1`}
-                        >
-                            {name}
-                        </span>
-                        <span
-                            // The active dot stretches with scaleX (not width) so it never triggers layout.
-                            className={`block h-2 w-6 origin-right rounded-full transition-[scale,opacity] duration-500 ${light ? 'bg-white' : 'bg-navy'} ${page === i ? '' : 'scale-x-[0.34] opacity-40 group-hover:opacity-80'}`}
-                        />
-                    </button>
-                </li>
-            ))}
-        </ol>
-    )
-}
+
+
 
 
 function CollectionBlobButton() {
@@ -171,7 +144,7 @@ export function FixedItems({ pages }: { pages: string[] }) {
     const { page, count } = useStage()
     if (!ready) return null
     const light = page === count - 1
-
+    console.log(pages)
     return (
         <>
             <header className="pointer-events-none fixed inset-x-0 top-0 z-40 flex items-start justify-between px-6 pt-6 sm:px-10 sm:pt-8">
